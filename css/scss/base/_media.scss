@@ -1,0 +1,546 @@
+/*------------------------------------*\
+    $MEDIA ELEMENTS
+\*------------------------------------*/
+
+/* Flexible Media */
+img, video, object {
+	max-width: 100%;
+	height: auto;
+}
+
+iframe {
+	margin-bottom: $space;
+}
+
+.page-content {
+	figure {
+		margin-top: 0;
+	}
+}
+
+figure {
+	
+	//margin-bottom: $space;
+	img {
+		//margin-bottom: $space-half;
+	}
+}
+figcaption {
+	font-style: italic;
+}
+
+/* Department Headers and Tags */
+.brick-lg {
+	max-width: 421px;
+}
+
+%link-tile {
+	padding: .8em;
+	margin: .8em;
+
+	h3 {
+		font-weight: bold;
+		font-size: $font-size-med * 1.4;
+		color: inherit;
+		margin-top: 0;
+	}
+
+	p {
+		margin-top: .35em;
+	}
+	a:hover &{
+		text-decoration:none;
+	}
+
+	@media screen and (min-width: $bp-sm){
+		max-width: 100%;
+		height: 290px;
+	}
+
+}
+
+.dept-feature {
+	@extend %link-tile;
+	margin: .8em 0em;
+	margin-top: 2em;
+	&.emph{
+		color: #FFF;
+		a {
+			color: $white;
+		}
+		h3 {
+			font-weight: 200;
+			text-align: center;
+		}
+		h4 {
+			color:#FFF;
+			text-transform: uppercase;
+		}
+		&:hover {
+			background-color: $dept-emph;
+			a {
+				color: $white;
+			}
+		}
+	}
+	
+}
+
+.dept-tease {
+	@extend %link-tile;
+	text-align: center;
+	h3 {
+		font-weight: 200;
+		font-size: 1.4em;
+		color: inherit;
+		margin-top: 0;
+		line-height: 1.5em;
+		text-align: center;
+	}
+}
+
+.link-tile {
+	@extend %link-tile;
+}
+
+.dept-tag {
+	display: inline-block;
+	padding: .3em;
+	border: solid 1px $white;
+	color: $white;
+	text-decoration: none;
+}
+
+.brick-vertical .dept-tag {
+	float: right;
+}
+
+
+.brick-vertical .tag-container {
+	position:absolute;
+	right: $pad-quarter;
+	top: $pad-quarter;		
+}
+.brick-horizontal .tag-container {
+	margin-bottom: $space-half;
+}
+.brick-horizontal .brick-sm:hover, .brick-horizontal .brick-sm:focus, .brick-horizontal .brick-sm:active {
+	opacity: 0.5;
+}
+
+.avatar-quote {
+	width: 180px; 
+	margin: 0; 
+	padding: .625em; 
+	text-align: center;
+	height: auto;
+	display: inline-block;
+}
+
+.avatar-text {
+	font-family: $font-alternate;
+	font-size: 1.2em;
+	color: $red;
+} 
+
+.avatar-text p {
+	padding-top: .625em;
+}
+
+cite.citation {
+	font-size: .8em;
+}
+
+
+//Department Bg and Text Colors
+.department-row {
+	margin-bottom: 2em;
+	margin-top: 2em;
+}
+.bshe {
+	background: $dept-bshe;
+	color: $white;
+	a {
+		text-decoration: none;
+		color: $white;
+	}
+	&:hover, &:focus, &:active {
+		background: rgba($dept-bshe, .5);
+		color: $dept-bshe;
+		a {
+			text-decoration: none;
+			color: $dept-bshe;
+		}
+	}
+}
+
+.bios {
+	background: $dept-bios;
+	color: $white;
+	a {
+		text-decoration: none;
+		color: $white;
+	}
+	&:hover, &:focus, &:active {
+		background: rgba($dept-bios, .5);
+		color: $dept-bios;
+		a {
+			text-decoration: none;
+			color: $dept-bios;
+		}
+	}
+}
+
+.gh {
+	background: $dept-gh;
+	color: $white;
+	a {
+		text-decoration: none;
+		color: $white;
+	}
+	&:hover, &:focus, &:active {
+		background: rgba($dept-gh, .5);
+		color: $dept-gh;
+		a {
+			text-decoration: none;
+			color: $dept-gh;
+		}
+	}
+}
+
+.eh {
+	background: $dept-eh;
+	color: $gray-dark;
+	&:hover, &:focus, &:active {
+		background: rgba($dept-eh, .5);
+		color: $gray-dark;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.epi {
+	background: $dept-epi;
+	color: $gray-dark;
+	&:hover, &:focus, &:active {
+		background: rgba($dept-epi, .5);
+		color: $gray-dark;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.hpm {
+	background: $dept-hpm;
+	color: $gray-dark;
+	&:hover, &:focus, &:active {
+		background: rgba($dept-hpm, .5);
+		color: $gray-dark;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.emph {
+	background: $dept-emph;
+	color: $white;
+	&:hover, &:focus, &:active {
+		background: rgba($dept-emph, .5);
+		color: $white;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+
+//Department Colors with 50% transparency
+
+.bshe-trans {
+	background: rgba($dept-bshe, .5);
+	color: $white;
+	&:hover, &:focus, &:active {
+		background: $dept-bshe;
+		color: $dept-bshe-hover;
+		text-decoration: none;
+	}
+}
+
+.bios-trans {
+	background: rgba($dept-bios, .5);
+	color: $white;
+	&:hover, &:focus, &:active {
+		background: $dept-bios;
+		color: $dept-bios-hover;
+		text-decoration: none;
+	}
+}
+
+.gh-trans {
+	background: rgba($dept-gh, .5);
+	color: $white;
+	&:hover, &:focus, &:active {
+		background: $dept-gh;
+		color: $dept-gh-hover;
+		text-decoration: none;
+	}
+}
+
+.eh-trans {
+	background: rgba($dept-eh, .5);
+	color: $gray-dark;
+	&:hover, &:focus, &:active {
+		background: $dept-eh;
+		color: $dept-eh-hover;
+		text-decoration: none;
+	}
+}
+
+.epi-trans {
+	background: rgba($dept-epi, .5);
+	color: $gray-dark;
+	&:hover, &:focus, &:active {
+		background: $dept-epi;
+		color: $dept-epi-hover;
+		text-decoration: none;
+	}
+}
+
+.hpm-trans {
+	background: rgba($dept-hpm, .5);
+	color: $gray-dark;
+	&:hover, &:focus, &:active {
+		background: $dept-hpm;
+		color: $dept-hpm-hover;
+		text-decoration: none;
+	}
+}
+
+.emph-trans {
+	background: rgba($dept-emph, .5);
+	color: $white;
+	&:hover, &:focus, &:active {
+		background: $dept-emph;
+		color: $dept-emph-hover;
+		text-decoration: none;
+	}
+}
+
+
+// Department Page Jumbotrons --------------------------------------------------
+.jumbotron.dept-hero {
+	margin-bottom: 0;
+	text-align: center;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding: 0;
+	font-weight: 200;
+	line-height: 1.3em;
+	h1 {
+		font-size: 3rem;
+		font-weight: 200;
+	}
+	h3 {
+		font-size: 1.5rem;
+		font-weight: 200;
+		line-height: 1.5em;
+	}
+    // height: 375px;
+    @media (min-width: $bp-sm) {
+    	padding-left: 0;
+    	padding-right: 0;
+    	height: 375px;
+    }
+    @media (min-width: $bp-md) {
+    	height: 450px;
+    }
+
+    .text-bg {
+    	// position: absolute;
+    	bottom: 0;
+    	left: 0;
+    	width: 100%;
+    	background-color: rgba(51, 51, 51, 0.8);
+    	@media (min-width: $bp-sm) {
+    		position: absolute;
+    	}
+    	.hero-text {
+    		color: $white;
+    		h1, .jumbotron-title {
+    			text-transform: uppercase;
+    			font-size: 3em;
+    			font-weight: 200;
+    			@media (min-width: $bp-xs-2) {
+    				@include font-size(2);
+    			}
+    			@media (min-width: $bp-md) {
+    				@include font-size(3);
+    			}
+    		}
+    		h3 {
+    			margin-bottom: 1.250em;
+    			color: inherit;
+    			text-transform: none;
+    			font-size: 1em;
+    			font-weight: 200;
+    			line-height: 1.5em;
+    			//@include font-size(1.25);
+    			@media (min-width: $bp-xs-2) {
+    				@include font-size(1);
+    			}
+    			@media (min-width: $bp-md) {
+    				font-size: 1em;
+    			}
+    		}
+    		.jumbotron-summary {
+    			//margin-bottom: 1.250em;
+    			color: inherit;
+    			text-transform: none;
+    			font-size: 2em;
+    			font-weight: 200;
+    			line-height: 1.5em;
+    			//@include font-size(1.25);
+    			@media (min-width: $bp-xs-2) {
+    				@include font-size(1);
+    			}
+    			@media (min-width: $bp-md) {
+    				font-size: 2em;
+    			}
+    		}
+    	}
+    }
+}
+
+.home-hero .text-bg {
+	padding: $space-half 0;
+}
+
+// dept page subnavigation
+.dept-links {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	font-size: 1em;
+	font-weight: bolder;
+	@media (min-width: $bp-sm){
+		font-size:1.25em;
+	}
+	ul {
+		list-style-type: none;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		@media (min-width: $bp-sm){
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		li {
+			border-right: none;
+			padding: 0;
+			margin: 0;
+			@media (min-width: $bp-md) {
+				border-right: 2px solid #333;
+			}
+			&:last-child {
+				border-right: none;
+			}
+			a {
+				display: block;
+				padding-bottom: .25em;
+				padding-top: .25em;
+				@media (min-width: $bp-sm){
+					padding-top: 1.11111111111111em;
+					padding-bottom: 1.11111111111111em;
+				} 
+			}
+		}
+	}
+}
+
+.dept-links-bshe {
+	background-color: $dept-bshe;
+	a {
+		color: $dept-bshe-link;
+		&:hover, &:focus, &:active {
+			background: $emory-blue;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
+
+.dept-links-bios {
+	background-color: $dept-bios;
+	a {
+		color: $dept-bios-link;
+		&:hover, &:focus, &:active {
+			background: $emory-blue;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
+
+.dept-links-eh {
+	background-color: $dept-eh;
+	a {
+		color: $dept-eh-link;
+		&:hover, &:focus, &:active {
+			background: $emory-blue;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
+
+.dept-links-epi {
+	background-color: $dept-epi;
+	a {
+		color: $dept-epi-link;
+		&:hover, &:focus, &:active {
+			background: $emory-blue;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
+
+.dept-links-hpm {
+	background-color: $dept-hpm;
+	a {
+		color: $dept-hpm-link;
+		&:hover, &:focus, &:active {
+			background: $emory-blue;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
+
+.dept-links-gh {
+	background-color: $dept-gh;
+	a {
+		color: $dept-gh-link;
+		&:hover, &:focus, &:active {
+			background: $emory-blue;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
+
+.dept-links-emph {
+	background-color: $dept-emph;
+	a {
+		color: $dept-emph-link;
+		&:hover, &:focus, &:active {
+			background: $emory-blue;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}

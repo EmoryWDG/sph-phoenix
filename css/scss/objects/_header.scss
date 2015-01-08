@@ -1,0 +1,59 @@
+// header specific variables
+$header-height: 2rem;
+
+header#header {
+    background: $white;
+}
+
+// Emory hat
+.header-hat {
+    background: $emory-blue;
+}
+.header-hat .container, .header-hat .emory-logo img {
+    /*height: $header-height;*/
+}
+.header-hat .emory-logo img {
+    margin: $pad-quarter 0;
+    height: 30px;
+}
+.header-hat .container {
+    min-height: $header-height;
+}
+a.emory-logo {
+    display: block;
+    max-width: 80%;
+    float: left;
+}
+
+// unit signature below Emory hat
+.unit-signature {
+    //width: 185px;
+    margin: 0 auto;
+    padding: 0;
+    img {
+        //margin: 1.375rem 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+@media all and (min-width: $bp-sm) {
+    // unit signature below Emory hat
+    .unit-signature {
+        //float: left;
+        img {
+            margin-left: 0;
+        }
+
+    }
+}
+
+@media all and (min-width: $bp-sm) and (max-width: $bp-md) {
+    // unit signature below Emory hat
+    .unit-signature {
+        max-width: 125px;
+    }
+}

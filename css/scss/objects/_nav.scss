@@ -1,0 +1,794 @@
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
+
+// navigation specific variables
+$utility-box-size: 48%;
+$primary-nav-font-size: 1;
+$primary-expanded-but-small-nav-size: 0.75;
+$secondary-nav-font-size: 0.875em;
+
+// toggle navigation
+.toggles {
+	font-family: $font-secondary;
+	padding: 0;
+	a {
+		display: inline-block;
+		width: auto;
+		position: relative;
+		text-decoration: none;
+		padding: $pad-quarter $pad-half;
+		border: 1px solid $gray-light-3;
+		border-radius: $pad-quarter;
+		margin-right: $pad;
+	}
+	a strong {
+		font-weight: normal;
+		display: none;
+	}
+
+	@media all and (min-width: $bp-xs-2) {
+		a strong {
+			display: inline-block;
+			padding-left: $pad-three-quarters;
+		}
+	}
+
+	a:hover, a:focus, a:active, a.active {
+		text-decoration: none;
+		background: darken($link, 5%);
+		color: $white;
+	}
+}
+
+.toggle-emory-nav {
+	margin: $pad-half 0;
+	clear: none;
+	float: right;
+	display: inline-block;
+	@include font-size(0.75);
+	a {
+		background: $medium-blue;
+		color: $white;
+		float: right;
+		margin: $pad-half 0;
+	}
+
+	a:hover, a:focus, a:active, a.active {
+		text-decoration: none;
+		background: darken($medium-blue, 5);
+	}
+}
+
+.toggles-main {
+	clear: both;
+	text-align: center;
+	background: $gray-light;
+	width: 100%;
+	padding: $pad-half;
+	a {
+		background: $white;	
+	}
+}
+
+// all navs
+nav {
+	position: relative;
+	clear: both;
+	font-family: $font-secondary;
+	> ul {
+		list-style: none outside none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		display: none;
+	}
+	.search-form {
+		margin: 0 $pad-half $pad $pad-half;
+		padding: 0;
+		max-width: 100%;
+		display: none;
+		position: relative;
+		.btn {
+			@include font-size(1.25);
+			border: 1px solid $gray;
+			border-bottom: 0;
+			&:hover, &:focus {
+	    		//border: 1px solid $gray-dark-3;
+	    	}
+	    }
+	}
+	.search-scope {
+		z-index: 100;
+		padding: $pad-half 0;
+		background: $white;
+		position: absolute;
+		margin: 0;
+		width: 100%;
+		border: 1px solid $gray-light-3;
+		border-top: 0;
+	}
+	.search-scope {
+		display: none;
+	}
+	.no-js .search-scope {
+		display: block;
+	}
+	.search-scope label:first-child {
+		border-top: 0;
+	}
+	.search-scope input {
+		position: absolute;
+		left: -9999em;
+	}
+	.no-js .search-scope input {
+		position: relative;
+		left: 0;
+		margin-right: 0.5em;
+	}
+	.search-scope label {
+		display: inline-block;
+		color: $gray-dark;
+		padding: $pad-quarter $pad-half;
+		cursor: pointer;
+	}
+	.no-js .search-scope label {
+		padding-left: $pad-half;
+	}
+	.search-scope label.checked {
+		font-weight: bold;
+	}
+	.no-js .search-scope label.checked {
+		font-weight: normal;
+	}
+	.no-js .search-scope label:nth-child(3) {
+		display: none;
+	}
+	.search-scope label:hover, .search-scope label:focus {
+		font-weight: bold;
+		background-color: #D9DFE3;
+	}
+	.no-js .search-scope label:hover, .no-js .search-scope label:focus {
+		font-weight: normal;
+		background-color: #D9DFE3;
+	}
+	.search-scope label {
+		display: block;
+		float: none;
+		border-top: 1px solid #D9DFE3;
+		margin-bottom: 0;
+	}
+
+}
+
+
+// utility nav inside emory hat
+nav.nav-emory-wide {
+	font-size: $secondary-nav-font-size;
+}
+nav.nav-emory-wide .top a {
+	color: $white;
+}
+nav.nav-emory-wide .top > a {
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+	padding: 0 $pad;
+}
+nav.nav-emory-wide .top a .fa {
+	padding-right: $pad-quarter;
+	width: $pad-three-quarters;
+}
+nav.nav-emory-wide .top .fa-caret-right:before {
+	content: "\f0d7";
+	margin-right: $pad-quarter;
+}
+nav.nav-emory-wide .top .nav-box {
+	color: $white;
+	background: $medium-blue;
+	@include font-size(0.75);
+	padding: 0 0 $pad 1.25rem;
+}
+nav.nav-emory-wide .top h4 {
+	color: #fff;
+    //@include font-size($secondary-nav-font-size);
+    font-size: $secondary-nav-font-size;
+    font-weight: bold;
+}
+nav.nav-emory-wide .top .nav-box .col {
+	width: $utility-box-size;
+	float: left;
+}
+nav.nav-emory-wide .top .nav-box .col:first-child {
+	margin-right: 100 - ($utility-box-size + $utility-box-size);
+}
+
+nav.nav-primary {
+	// background: $gray-light;
+	margin: 0 0 $pad-half 0;
+	@include font-size($primary-nav-font-size);
+
+
+	ul {
+		margin: 0 0 $pad-half 0;
+		ul {
+			//@include font-size($secondary-nav-font-size);
+			font-size: $secondary-nav-font-size;
+			margin: 0 0 $pad-half $pad-double;
+		}
+	}
+	li.expander {
+		ul.nav-secondary {
+			display: none;
+		}
+		&:hover ul.nav-secondary, &:focus ul.nav-secondary {
+			display: block;
+		}
+		.fa-caret-right {
+			margin-left: $pad-half;
+		}
+		&:hover .fa-caret-right:before, &:focus .fa-caret-right:before {
+			content: "\f0d7";
+			margin-right: $pad-quarter;
+		}
+	}
+	a {
+		height: 3.125em;
+		line-height: 3.125em;
+		padding: 0 $pad;
+		display: block;
+		text-decoration: none;
+		color: $medium-blue;
+		&:hover, &:focus, &:active, &.active {
+			background: $active-nav;
+			color: $link;
+		}
+	}
+
+}
+
+nav.nav-fixed {
+	top: 0;
+	z-index: 100;
+	position: fixed;
+	width: 100%;
+}
+
+nav.nav-secondary {
+	background: $active-nav;
+	font-size: .9em;
+	margin-top: 1em;
+	ul {
+		li {
+			display: inline-block;
+			padding: 0em .8em 0em 1em;
+			border-left: $link 1px solid;
+			margin: .3em -.1em .3em .3em;
+			a {
+				color: $link;
+			}
+			&:first-child {
+				border-left: 0px;
+			}	
+		}
+	}
+}
+nav#sub-nav {
+	font-family: $font;
+	font-size: .9em;
+	margin-left: -15px;
+	ul {
+		list-style: none;
+		padding-left: 0;
+		li {
+			border-top: dotted 1px #999;
+			a {
+				display: block;
+				color: $medium-blue;
+				padding: .5em 1.75em .5em 1em;
+				&:hover {
+					background-color: $active-nav;
+					text-decoration: none;
+				}
+			}
+			&.parent > a {
+				background-image: url('img/arrow-right.png');
+				background-repeat: no-repeat;
+				background-position: right center;
+			}
+			&.active {
+				&.parent {
+					> a {
+						background-image: url('img/arrow-down.png');
+						background-repeat: no-repeat;
+						background-position: right center;
+					}
+					> ul.level3 > li > a {
+						padding-left: 2em;
+						&:hover {
+							background-color: $medium-blue;
+							color: #FFF;
+						}
+					}
+					> ul.level4 > li > a {
+						padding-left: 3em;
+						&:hover {
+							background-color: $light-blue;
+							color: #FFF;
+						}
+					}
+				}
+			}
+		}
+		&.level2 {
+			li {
+				&.active {
+					&.parent{
+						background-color: $active-nav;
+						border-left: solid $border-med $medium-blue;
+					}
+				}
+			}
+
+		}
+		&.level3 {
+			li {
+				&.active {
+					&.parent{
+						background-color: $active-nav;
+						border-left: solid $border-med $light-blue;
+
+					}
+				}
+			}
+		}
+	}
+	#section-index {
+		color: $medium-blue;
+		border-bottom: solid $border-med $medium-blue;
+		border-top: none;
+		border-left: none;
+		a {
+			background-color: #FFF;
+			background-image: none;
+			font-weight: bold;
+		}
+	}
+	// li {
+	// 	margin-top: 0;
+	// 	list-style: none;
+	// 	&#section-index {
+	// 		color: $medium-blue;
+	// 		border-bottom: solid $border-med $medium-blue;
+	// 		border-top: none;
+	// 		border-left: none;
+	// 		a {
+	// 			background-color: #FFF;
+	// 			background-image: none;
+	// 		}
+	// 	}
+	// 	&:hover {
+	// 		a {
+	// 			background-color: $active-nav;
+	// 		}
+	// 	}
+	// 	&.active {
+	// 		border-left: $border-style;
+	// 		a {
+	// 			background-color: $active-nav;
+	// 			font-weight: bold;
+	// 		}
+	// 		&.parent {
+	// 			background-color: $active-nav;
+	// 			border-left: dotted 1px #999;
+	// 			a {
+	// 				background-image: url('img/arrow-down.png');
+	// 				background-repeat: no-repeat;
+	// 				background-position: right center;
+	// 			}
+	// 			ul {
+	// 				display: block;
+	// 				li a{
+	// 					background-image: none;
+	// 					padding-left: 1.5em;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// 	&.parent {
+	// 		a {
+	// 			background-image: url('img/arrow-right.png');
+	// 			background-repeat: no-repeat;
+	// 			background-position: right center;
+	// 		}
+	// 		ul {
+	// 			display: none;
+	// 		}	
+	// 	}
+	// 	a {
+	// 		padding: .5em 1.5em .5em .5em;
+	// 		border-top: $border-style; 
+	// 		display: block;
+	// 		width: 100%;
+	// 	}
+	// 	&:first-child {
+	// 		a {
+	// 			border-top: none;
+	// 		}
+	// 	}
+	// 	&:nth-child(2){
+	// 		@extend :first-child;
+	// 	}
+	// }
+	// ul.level2 {
+	// 	padding-left: 0;
+	// 	li {
+	// 		border-top: $border-style;
+	// 		&.parent {
+	// 			a{
+	// 				border-left: none;
+	// 				background-image: url('img/arrow-right.png') !important;
+	// 				background-repeat: no-repeat;
+	// 				background-position: right center;
+	// 			}
+	// 			ul {
+	// 				display: none;
+	// 			}
+	// 		}
+	// 		a {
+	// 			border-top: none;
+	// 			font-weight: normal;
+	// 		}
+	// 		&.active {
+	// 			border-left: solid 3px $medium-blue;
+	// 			a {
+	// 				font-weight: bold;
+	// 			}
+	// 			&.parent {
+	// 				ul {
+	// 					li a {
+	// 						background-image: none !important;
+	// 						padding-left: 3em;
+	// 						font-weight: normal;
+	// 					}
+	// 					display: block;
+	// 				}
+	// 				a {
+	// 					border-left: none;
+	// 					background-image: url('img/arrow-down.png') !important;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// ul.level3 {
+	// 	list-style: none;
+	// 	margin-left: 0;
+	// 	padding-left: 0;
+	// 	background-color: $active-nav;
+	// 	li {
+	// 		border-top: $border-style;
+	// 		&.parent {
+	// 			a{
+	// 				border-left: none;
+	// 				background-image: url('img/arrow-right.png') !important;
+	// 				background-repeat: no-repeat;
+	// 				background-position: right center;
+	// 			}
+	// 			ul {
+	// 				display: none;
+	// 			}
+	// 		}
+	// 		a {
+	// 			border-top: none;
+	// 			font-weight: normal;
+	// 			background-image: none;
+	// 		}
+	// 		&.active {
+	// 			border-left: solid 3px $light-blue;
+	// 			a {
+	// 				font-weight: bold !important;
+	// 			}
+	// 			&.parent ul li a {
+	// 				padding-left: 4.5em;
+	// 				font-weight: normal !important;
+	// 				font-size: .9em;
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// ul.level4 {
+	// 	list-style: none;
+	// 	margin-left: 0;
+	// 	padding-left: 0;
+	// 	background-color: $active-nav;
+	// 	li {
+	// 		border-top: $border-style;
+
+	// 		a {
+	// 			border-top: none;
+	// 			font-weight: normal;
+	// 			background-image: none;
+	// 		}
+	// 		&.active {
+	// 			border-left: solid 3px $light-blue;
+	// 			a {
+	// 				font-weight: bold !important;
+	// 			}
+	// 		}
+	// 	}
+	// }
+}
+
+// if we are at least at the small breakpoint size
+@media all and (min-width: $bp-sm) {
+	// all toggles
+	.toggles {
+		display: none;
+	}
+
+
+
+	// all navs
+	nav {
+		clear: none;
+		position: relative;
+		> ul {
+			display: block;
+			> li {
+				float: left;
+			}
+		}
+	}
+
+	// emory wide nav
+	nav.nav-emory-wide .top {
+		text-align: left;
+		vertical-align: middle;
+		line-height: $header-height;
+	}
+	nav.nav-emory-wide .top > a:hover, nav.nav-emory-wide .top > a:focus, nav.nav-emory-wide .top > a:active, nav.nav-emory-wide .top.active > a {
+		background: $medium-blue;
+	}
+	nav.nav-emory-wide .top .fa-caret-right:before {
+		content: "\f0da";
+		margin-right: $pad-quarter;
+	}
+	nav.nav-emory-wide .top:hover .fa-caret-right:before, nav.nav-emory-wide .top:focus .fa-caret-right:before {
+		content: "\f0d7";
+		margin-right: $pad-quarter;
+	}
+	nav.nav-emory-wide .top .nav-box {
+		color: $white;
+		background: $medium-blue;
+		display: none;
+		position: absolute;
+		right: 0;
+		z-index: 1000;
+		float: left;
+		min-width: 26rem;
+		@include font-size(0.75);
+		padding: 0 0 $pad 1.25rem;
+	}
+	nav.nav-emory-wide .top:hover .nav-box, /*.no-js*/ nav.nav-emory-wide .top:focus .nav-box {
+		display: block;
+	}
+	nav.nav-emory-wide {
+		clear: none;
+		display: block;
+		float: right;
+	}
+
+	// primary navigation
+
+
+
+	.nav-search-wrap{
+		// margin: ($pad-and-quarter * 2) 0 0 0;
+		margin: 0 0 1em 0;
+		padding: 0;
+		nav.nav-primary {
+			//float: right;
+			background: transparent;
+			margin: 2.5em 2em 0 0;
+			//1.125rem
+			ul {
+				margin: 0;
+				float: left;
+				width: auto;
+				max-width: 96.286472148541%;
+				ul {
+					position: absolute;
+					width: auto;
+					right: 0;
+					margin-top: $pad;
+					padding: 0 $pad-half;
+					background: $active-nav;
+					> li {
+						float: left;
+						position: relative;
+						margin-left: $pad-quarter;
+						padding-left: $pad-quarter;
+					}
+					> li:after {
+						content: '';
+						height: 2.25em - $pad;
+						width: 1px;
+						background: $link;
+						position: absolute;
+						bottom: $pad-half;
+						left: 0;
+					}
+					> li:first-child {
+						padding-left: 0;
+						margin-left: 0;
+					}
+					> li:first-child:after {
+						content: '';
+						height: 0;
+						width: 0;
+					}
+					a {
+						line-height: 2rem;
+						height: 2rem;
+						padding: 0 $pad-and-quarter;
+						&:hover, &:focus, &:active, &.active {
+							color: $link;
+							font-weight: bold;
+							padding: 0 $pad-half;
+						}
+					}
+					
+				}
+			}
+			.search-form {
+				display: block;
+				float: left;
+				width: auto;
+				max-width: 1.75em;
+				margin-left: 2em;
+				input, .search-scope {
+					display: none;
+				}
+				.btn {
+					padding: 0.25em;
+					margin-top: 0.25em;
+					border: 3px solid $gray;
+					&:hover, &:focus {
+						border: 3px solid $gray-dark-3;
+					}
+				}
+			}
+		}
+
+		#main-search-toggle{
+			padding: 0.25em;
+			margin: .2em 0 .5em 0;
+			border: 3px solid $gray;
+			font-size: 1.5em;
+			width: auto;
+			&:hover, &:focus {
+				border: 3px solid $gray-dark-3;
+			}
+		}
+		.input-group-btn {
+			margin-left: 2em;
+			float: right;
+		}
+	}
+}
+
+// if we are at the awkward breakpoint
+@media all and (min-width: $bp-sm) and (max-width: $bp-md) {
+
+	.header-hat, nav.nav-emory-wide {
+		font-size: $secondary-nav-font-size;
+	}
+	.nav-search-wrap{
+		nav.nav-primary {
+			//@include font-size($primary-expanded-but-small-nav-size);
+			a {
+				padding: 0 $pad-half;
+				font-size: .75em;
+			}
+			.search-form .btn {
+				@include font-size($primary-expanded-but-small-nav-size);
+			}
+		}
+		.input-group-btn {
+			font-size: .7em;
+		}
+
+	}
+	nav.nav-secondary {
+		font-size: .7em;
+	}
+
+}
+
+@media all and (max-width: $bp-sm) {
+	.unit-signature {
+		img {
+			width: 40%;
+			max-width: 150px;
+			margin-bottom: 1em;
+		}
+	}
+	nav.nav-primary {
+
+		.navbar-toggle {
+			//width: auto;
+			text-align: center;
+			border: solid 1px #CCC;
+			margin: 0;
+			height: 50px;
+			.fa {
+				display: inline-block;
+				padding-right: 1em;
+			}
+		}
+		#main-search-toggle {
+			background-color: transparent;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			color: black !important;
+			font-size: 1em;
+			height: 50px;
+			padding: 0 1em;
+			margin: 0;
+			.label {
+				display: inline-block !important;
+				color: $black-light-2;
+				font-size: 1em;
+				font-weight: normal;
+			}
+		}
+	}
+}
+
+@media all and (min-width: $bp-md) and (max-width: $bp-lg) {
+	.nav-search-wrap{
+		nav.nav-primary {
+			a {
+				padding: 0 &pad;
+				font-size: .9rem;
+			}
+		}
+		.input-group-btn {
+			font-size: .8em;
+		}
+	}
+	nav.nav-secondary {
+		font-size: .8em;
+	}
+}
+//Pagination
+.pagination {
+	overflow: hidden;
+
+	li {
+		float: left;
+		border-right: 1px solid $gray-light-2;
+
+		&:last-child {
+			border: 0;
+		}
+	}
+
+	a {
+		padding: $pad;
+	}
+}
+
+//Breadcrumbs
+.breadcrumbs li {
+	display: inline;
+}
+
+.breadcrumbs li:after {
+	content: " >> "
+}
+
+.breadcrumbs li:last-child:after {
+	content: "  "
+}

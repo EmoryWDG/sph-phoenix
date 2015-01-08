@@ -1,0 +1,76 @@
+
+@mixin background-color($bg-color) {
+	background-color: $bg-color;
+	&:hover{
+		background-color: lighten($bg-color, $percentage);
+	}
+}
+
+.social-row {
+	margin-bottom: 2em;
+}
+.row-content-block {
+	.social-media {
+		border-radius: 5px;
+		border: solid 1px #CCC;
+		padding: 10px;
+		text-align: center;
+		min-height: 160px;
+		&.facebook {
+			@include background-color($facebook);
+		}
+		&.flickr {
+			@include background-color($flickr);
+		}
+		&.foursquare{
+			@include background-color($foursquare);
+		}
+		&.googleplus{
+			@include background-color($googleplus);
+		}
+		&.instagram{
+			@include background-color($instagram);
+		}
+		&.linkedin {
+			@include background-color($linkedin);
+		}
+		&.pinterest{
+			@include background-color($pinterest);
+		}
+		&.reddit{
+			@include background-color($reddit);
+		}
+		&.rss-square{
+			@include background-color($rss);
+		}
+		&.tumblr{
+			@include background-color($tumblr);
+		}
+		&.twitter{
+			@include background-color($twitter);
+		}
+		&.vimeo{
+			@include background-color($vimeo);
+		}
+		&.vine{
+			@include background-color($vine);
+		}
+		&.wordpress{
+			@include background-color($wordpress);
+		}
+		&.yelp{
+			@include background-color($yelp);
+		}
+		&.youtube{
+			@include background-color($youtube);
+		}
+
+		a {
+			color: #FFF;
+		}
+		.social-icon {
+			font-size: 3em;
+		}
+	}
+	
+}

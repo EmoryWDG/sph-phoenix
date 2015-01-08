@@ -1,0 +1,81 @@
+.brick, .brick .thumbnail {
+	position: relative;
+}
+.brick > a {
+	text-decoration: none;
+}
+.brick img {
+	margin-bottom: $space-half;
+}
+
+/* Block */
+.block {
+	overflow: hidden;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.headline {
+	line-height: 1.2;
+}
+
+/* Hero */
+.hero {
+	margin-bottom: $space-half;
+
+	.h-thumb {
+		img {
+			display: block;
+		}
+	}
+
+	@media all and (min-width: $bp-sm) {
+		position: relative;
+
+		.h-text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background: $dim;
+			color: $white;
+			padding: $pad-and-half;
+		}
+	}
+}
+
+/* Block Inset */
+.hero-medium {
+	position: relative;
+
+	.h-thumb {
+		position: relative;
+		z-index: 0;
+
+		img {
+			display: block;
+		}
+	}
+}
+
+/* Hero Block */
+.hero-medium {
+	margin-bottom: $space-half;
+	position: relative;
+
+	.headline {
+		font-size: 1.1em;
+	}
+
+	.h-text {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background: $dim;
+		color: $white;
+		padding: $pad-half;
+	}
+}

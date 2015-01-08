@@ -1,0 +1,110 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+.btn {
+	display: inline-block;
+	background: $gray;
+	color: $white;
+	line-height: 1;
+	white-space: normal;
+	//padding: $pad-half;
+	border: 0;
+	text-align: center;
+	border-radius: 5px;
+	padding: 1em;
+	margin: .5em 0;
+	@include font-size(1);
+	
+	&:hover, &:focus {
+		background: darken($gray, 5%);
+		color: $white;
+	}
+
+	&.btn-primary {
+		background: $light-blue;
+		color: $white;
+		&:hover, &:focus {
+			background: darken($light-blue, 5%);
+		}
+	}
+
+	&.btn-secondary {
+		background: $red;
+		color: $white;
+		&:hover, &:focus {
+			background: darken($red, 5%);
+		}
+	}
+
+	&.btn-tertiary {
+		background: $burgundy;
+		color: $white;
+		&:hover, &:focus {
+			background: darken($burgundy, 5%);
+		}
+	}
+
+	&.btn-disabled {
+		background: $gray-light-2;
+		color: $gray;
+	}
+
+
+	&.primary {
+		background: $light-blue;
+		color: $white;
+		&:hover, &:focus {
+			background: darken($light-blue, 5%);
+		}
+	}
+
+	&.secondary {
+		background: $red;
+		color: $white;
+		&:hover, &:focus {
+			background: darken($red, 5%);
+		}
+	}
+
+	&.tertiary {
+		background: $burgundy;
+		color: $white;
+		&:hover, &:focus {
+			background: darken($burgundy, 5%);
+		}
+	}
+
+	&.disabled {
+		background: $gray-light-2;
+		color: $gray;
+	}
+
+}
+.page-content .btn {
+	@extend .btn;
+	width: 100%;
+}
+.btn-small {
+	padding: $pad-half;
+}
+
+.btn-large {
+	padding: $pad-half;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	font-weight: normal;
+}
+
+
+.btn-text {
+	padding: 0;
+	background: transparent;
+	border: 0;
+	color: $link;
+	font-weight: inherit;
+	&:hover, &:focus, &:active {
+		background: transparent;
+		color: darken($link, 5%);
+		text-decoration: underline;
+	}
+}

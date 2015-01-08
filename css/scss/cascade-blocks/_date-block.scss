@@ -1,0 +1,20 @@
+.date-block-wrapper{
+
+  .date-block-header {
+    text-transform: uppercase;
+  }
+  .event-date {
+    text-transform: uppercase;
+    .mmm {
+      color: $gray;
+      font-size: 2em;   
+    }
+
+    .d {
+      color: $gray-dark;
+      display: inline-block;
+      font-size: 3em;
+    }
+  }
+}
+

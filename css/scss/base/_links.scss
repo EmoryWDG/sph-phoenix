@@ -1,0 +1,20 @@
+/* Links */ 
+a {
+	color: $link;
+	text-decoration: none;
+	outline: 0;
+	
+	&:hover, &:focus, &:active {
+		color: darken($link, 5%);
+		text-decoration: underline;
+	}
+}
+
+.skip, .skip:hover, .skip:visited {
+    height: 1px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: -500px;
+    width: 1px;
+}

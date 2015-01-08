@@ -1,0 +1,49 @@
+//Trumba stuff
+
+#trumba\.spud\.0 {
+  height: auto !important;
+  overflow: auto !important;
+
+}
+
+  #trumba\.spud\.0\.iframe {
+    overflow: auto !important;
+  }
+
+    .twEventCell {
+      border-radius: 3px 3px 0 0 !important;
+      display: block;
+      margin-bottom: 1em;
+
+
+      .twDescription {
+
+        > a {
+          background: none repeat scroll 0 0 #eee;
+          border-radius: 5px 5px 0 0;
+          color: #444 !important;
+          display: block;
+          font-family: "Helvetica",sans-serif !important;
+          font-size: 1.1em !important;
+          font-weight: 100 !important;
+          padding: 0.5em;
+          text-align: center;
+          text-decoration: none;
+        }
+
+        > a:hover {
+        	background: none repeat scroll 0 0 #ddd;
+        }
+
+      }
+
+      .twDateTime {
+        background: none repeat scroll 0 0 #fff;
+        color: #999;
+        display: block;
+        padding: 0.5em;
+        text-align: center;
+      }
+
+    }
+

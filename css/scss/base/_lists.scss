@@ -1,0 +1,29 @@
+ol, ul {
+	//margin: 0;
+	//padding: 0;
+	//list-style: none;
+}
+
+ul li {
+	line-height: 1.6;
+}
+
+ul li, 	ol li {
+	line-height: $space-double;
+}
+
+/* Definition Lists */
+dl {
+	overflow: hidden;
+	margin: 0 0 $space;
+}
+
+dt {
+	font-weight: bold;
+	padding-bottom: $pad-quarter;
+}
+
+dd {
+	margin-left: 0;
+	padding-bottom: $pad;
+}

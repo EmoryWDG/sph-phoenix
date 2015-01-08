@@ -1,0 +1,128 @@
+$light: #FFFFFF;
+$dark: #000000;
+
+.call-to-action{
+
+	.stuff {
+		background: none repeat scroll 0 0 #444;
+		padding: 20px;
+		overflow:auto;
+
+		@media all and (min-width: $bp-sm) {
+			position: absolute;
+			top: 20px;
+			width: 70%;
+			padding: inherit;
+			background: transparent;
+		}
+		
+	}
+
+
+	.image{
+		position: relative;
+		width:100%;
+	}
+	.title{
+		font-size: 1.5em;
+		color: #FFFFFF;
+		text-shadow: 0 0 12px #000000;
+	}
+	.subtitle{
+		font-size: .9em;
+		color:$light;
+		text-shadow: 0 0 5px #000000;
+		margin-bottom:25px;
+		list-style: none;
+	}
+	.horizontal-left {
+		left: 25px;
+		text-align: left;
+	}
+	.horizontal-right {
+		right: 25px;
+		text-align: right;
+		
+		>.caption-list{
+			>ul{
+				float:right;
+			}
+		}
+	}
+	.horizontal-center {
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+	}
+	.button {
+		background-color: #B12734;
+		color: $light;
+		text-align: center;
+		margin-bottom: 1em;
+
+		@media all and (min-width: $bp-sm) {
+			position: absolute;
+			bottom: 20px;
+			margin-bottom: inherit;
+		}
+	}
+
+	.button-text {
+		color: $light;
+		padding: 10px;
+	}
+
+}
+.button-align-left {
+	left:0px;
+}
+.button-align-right {
+	right:0px;
+}
+.button-align-center {
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+.caption-list {
+	color: $light;
+	display: block;
+	width: 100%;
+	ul{
+		width: 325px;
+		list-style: none;
+		padding: 0px;
+		li{
+			text-shadow: 0 0 5px #000000;
+			font-size: .8em;
+			margin-bottom: 15px;
+			line-height: 1.6em;
+		}
+	}	
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px)
+{
+	.caption-list{
+		display: none;
+	}
+	.call-to-action .title {
+		font-size: 1em;
+	}
+	.subtitle {
+		display: none;
+	}
+	.call-to-action .button {
+		margin-bottom: 1em;
+		position: inherit;
+	}
+	.call-to-action .button .button-text {
+		font-size: .8em;
+		padding: 5px;
+	}
+}
+
+
+

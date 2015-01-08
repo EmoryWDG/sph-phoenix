@@ -1,0 +1,287 @@
+/*Section Landing Pages*/
+$index-block-border: 5px solid $white;
+
+$dk-gray: #777;
+$lt-gray: #AAA;
+
+/*.page-content figure.one-fourth img.cta-thumb {
+	max-width: 64px;
+}*/
+
+.row-content-block {
+	height: 100%;
+}
+
+.row.equal-height-row .col-sm-6 .row-content-block .page-content figure.one-fourth img {
+	max-width: 64px;
+}
+
+.row.equal-height-row .col-sm-6 .row-content-block .page-content figure.one-fourth, .structured-content-block figure.one-fourth {
+	width: 15%;
+}
+
+.row.equal-height-row .col-sm-6 .row-content-block .page-content h2 {
+	margin-top: 5px;
+	font-size: 1.5rem;
+	margin-bottom: 5px;
+}
+
+p.landing-intro {
+	color: $lt-gray;
+	font-size: $font-size-med;
+}
+
+.index-blocks {
+	text-align: center;
+	.row-content-block {
+		padding: .5em 1em;
+	}
+	p {
+		color: $white;
+	}
+
+	a {
+		color: $white;
+	}
+	
+}
+
+.index-blocks .white {
+	
+	p {
+		color: $gray-dark;
+	}
+
+	a {
+		color: $link;
+	}
+	
+}
+
+.index-blocks .red {
+	background: $red;
+}
+
+.index-blocks .emory-blue {
+	background: $emory-blue;
+}
+
+.index-blocks .medium-blue {
+	background: $medium-blue;
+}
+
+.index-blocks .light-blue {
+	background: $light-blue;
+}
+
+.index-blocks .dk-gray {
+	background: $dk-gray;
+}
+
+.index-blocks .lt-gray {
+	background: $lt-gray;
+}
+
+.factoid {
+	position: relative;
+	height: 100%;
+	background-image: url("img/medium-blue-noise.jpg");
+	overflow: hidden;
+	.number {
+		display: inline-block;
+		width: 47%;
+		background-image: url('img/light-blue-triangle.png');
+		background-position: right center;
+		color: white;
+		display: inline-block;
+		float: left;
+		font-size: 5em;
+		font-weight: 200;
+		height: 156%;
+		margin-right: -10%;
+		padding-left: 0.3em;
+		padding-top: 25%;
+		position: relative;
+		text-align: left;
+		width: 47%;
+		z-index: 2;
+		.subscript {
+			font-size: .5em;
+			display: inline-block;
+			font-weight: 200;
+			width: 60px;
+			text-align: left;
+		}
+	}
+	.description {
+		margin-left: -50%;
+		padding-left: 100%;
+		color: #FFF;
+		font-size: 1.2em;
+		font-weight: 200;
+		padding-top: 10%;
+		line-height: 2em;
+		vertical-align: middle;
+		bottom: 0;
+		position: absolute;
+		padding-bottom: 2.2em;
+
+	}
+}
+
+.factoid p:first-child {
+	font-size: 4.5rem;
+}
+
+.icon-container {
+	margin: 1em;
+	.block-icon {
+		border-radius: 50%;
+		height: 75px;
+		width: 75px;
+		margin: auto;
+		text-align: center;
+		padding: 1.3em 0;
+		.fa {
+			font-size: 2.2em;
+		}
+	}
+}
+
+.homepage {
+	h2 {
+		text-transform: uppercase;
+		font-weight: 200;
+	}
+	margin-bottom: 2em;
+	@media all and (max-width: $bp-sm) {
+		margin-bottom: 0;
+	}
+}
+
+.red {
+	background: $red;
+	h1, h2, h3, h4, h5, h6 {
+		color: #FFF;
+	}
+}
+
+.emory-blue {
+	background: $emory-blue;
+	h1, h2, h3, h4, h5, h6 {
+		color: #FFF;
+	}
+}
+
+.medium-blue {
+	background: $medium-blue;
+	h1, h2, h3, h4, h5, h6 {
+		color: #FFF;
+	}
+}
+
+.light-blue {
+	background: $light-blue;
+	h1, h2, h3, h4, h5, h6 {
+		color: #FFF;
+	}
+	.icon-container .block-icon {
+		background-color: #3d5c99;
+		color: #FFF;
+
+	}
+	&.noise {
+		background-image:url('img/light-blue-noise.jpg');
+		.icon-container .block-icon {
+			background-image:url('img/medium-blue-patchwork.jpg')
+		}
+
+	}
+}
+
+.dk-gray {
+	background: $dk-gray;
+	h1, h2, h3, h4, h5, h6 {
+		color: #FFF;
+	}
+}
+
+.lt-gray {
+	background: $lt-gray;
+	h1, h2, h3, h4, h5, h6 {
+		color: $gray-dark;
+	}
+}
+
+
+.gray-lt {
+	background: $gray-light-2;
+	h1, h2, h3, h4, h5, h6 {
+		color: $gray-dark;
+	}
+	.icon-container .block-icon {
+		background-color: $light-blue;
+		color: #FFF;
+	}
+	.btn {
+		background-color: $gray-dark;
+		&:hover {
+			background-color: $gray-dark-2;
+		}
+	}
+}
+
+.white {
+	border: solid 1px #CCC;
+	background: #FFF;
+	h1, h2, h3, h4, h5, h6 {
+		color: $gray-dark;
+	}
+}
+
+.cta-row {
+	background-color: #f1f1f1;
+	padding: 2em 0em;
+	button {
+		position: inherit;
+		width: 100% !important;
+		@media all and (min-width: $bp-sm) {
+			position: absolute;
+			bottom: 0;
+			width: 90% !important;
+		}
+	}
+	.row-content-block {
+		min-height: 210px;
+	}
+
+
+}
+
+
+.additional-resources-row {
+	text-align: center;
+	ul.custom-list {
+		margin-bottom: 2em;
+		li {
+			list-style: none;
+			display: inline-block;
+			padding: 1em;
+
+			a {
+				background-color: white;
+				padding: 1em;
+				border-radius: 5px;
+				&:hover, &:focus {
+					background: darken(#FFF, 15%);
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+.careers .equal-height {
+	min-height: 230px;
+}
+

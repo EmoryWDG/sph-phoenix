@@ -1,0 +1,19 @@
+html {
+	font-size: 16px;
+}
+body {
+	background: $gray-light;
+	font: 100%/1.5 $font;
+	-webkit-text-size-adjust: 100%;
+	color: $gray-dark;
+	overflow-x: hidden;
+}
+header > .container, main {
+	margin: 0 auto;
+	background: $white;
+}
+main {
+	a {
+		color: $red;
+	}
+}

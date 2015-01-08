@@ -1,0 +1,124 @@
+
+
+.btn-search-submit {
+    float: right;
+    margin-right:10px;
+    padding:22px 10px 22px 10px;
+    background-color: $black-light-1;
+
+    span {
+        display: block;
+        float: left;
+        //font-size: 20px;
+        text-transform: uppercase;
+        color: $white;
+        margin:-1px 10px 0;
+    }
+
+    @media screen and (min-width: $bp-sm) {
+        //applies to widths above 768px
+        padding-top:38px;
+        padding-bottom:38px;
+    }
+}
+
+
+
+.hasPlaceholderText {
+    color: $gray-dark;
+}
+
+.header-search-wrap {
+    width: 100%;
+    position: static;
+    top: 0;
+    left: 0;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    perspective: 800px;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 0.1s ease-in-out 0.15s,box-shadow 0.1s ease-in-out;
+    -moz-transition: height 0.1s ease-in-out 0.15s,box-shadow 0.1s ease-in-out;
+    -ms-transition: height 0.1s ease-in-out 0.15s,box-shadow 0.1s ease-in-out;
+    -o-transition: height 0.1s ease-in-out 0.15s,box-shadow 0.1s ease-in-out;
+    transition: height 0.1s ease-in-out 0.15s,box-shadow 0.1s ease-in-out;    
+
+    &.search-open {
+        height: 57px;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.65);
+        -webkit-transition: height 0.1s ease-in-out,box-shadow 0.1s ease-in-out 0.15s;
+        -moz-transition: height 0.1s ease-in-out,box-shadow 0.1s ease-in-out 0.15s;
+        -ms-transition: height 0.1s ease-in-out,box-shadow 0.1s ease-in-out 0.15s;
+        -o-transition: height 0.1s ease-in-out,box-shadow 0.1s ease-in-out 0.15s;
+        transition: height 0.1s ease-in-out,box-shadow 0.1s ease-in-out 0.15s;
+
+        .header-search{
+            -webkit-transform: rotateX(0deg);
+            -moz-transform: rotateX(0deg);
+            -ms-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+        }
+
+        @media screen and (min-width: $bp-sm) {
+            height: 88px;
+        }
+    }
+
+    @media screen and (min-width: $bp-lg) {
+        top: 198px;
+        position: absolute;
+        z-index: 999;
+
+    }
+
+
+    .header-search {
+        display: block;
+        width: 100%;
+        background: $black-light-1;
+        @include transition(all, 0.15s, ease-in-out, 0s);
+
+        -webkit-transform-origin: center top;
+        -ms-transform-origin: center top;
+        transform-origin: center top;
+        -webkit-transform: rotateX(-90deg);
+        -moz-transform: rotateX(-90deg);
+        -ms-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+
+        fieldset {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        input[type="search"],
+        input#q {
+            border: none;
+            background: none;
+            font-size: 23px;
+            font-weight: bold;
+            width: 60%;
+            color: $white;
+            margin: 5px;
+            padding: 10px 0;
+
+            &:focus{
+              border: none;
+          }
+
+          @media screen and (min-width: $bp-sm) {
+            font-size: 40px;
+            width: 80%;
+            color: #fff;
+            margin-top: 18px;
+            font-weight: 500;
+            padding: 0;
+        }
+    }
+}
+}
+
