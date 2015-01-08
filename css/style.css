@@ -1778,6 +1778,7 @@ nav#sub-nav #section-index a {
   .nav-search-wrap .input-group-btn {
     margin-left: 2em;
     float: right;
+    font-size: 1em;
   }
 }
 @media all and (min-width: 48em) and (max-width: 62em) {
