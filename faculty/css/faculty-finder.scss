@@ -1,0 +1,157 @@
+@import '../../pattern-lab/source/css/scss/generic/variables'; //Change this local path as needed
+@import 'faculty-mixins';
+
+#filter-departments {
+	li.dept{
+		cursor: pointer;
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+		
+		@media screen and (min-width: $bp-sm){
+			display: inline-block;
+			width:auto;
+			margin:inherit;
+		}
+
+		&.dept-bios.active a {
+			@include dept-colors($dept-bios,$white);
+		}
+		&.dept-bshe.active a {
+			@include dept-colors($dept-bshe,$white);
+		}
+		&.dept-epi.active a {
+			@include dept-colors($dept-epi,$gray-dark);
+		}
+		&.dept-hpm.active a {
+			@include dept-colors($dept-hpm,$gray-dark);
+		}
+		&.dept-gh.active a {
+			@include dept-colors($dept-gh,$white);
+		}
+		&.dept-eh.active a {
+			@include dept-colors($dept-eh,$gray-dark);
+		}
+		&.dept-emph.active a {
+			@include dept-colors($dept-emph,$white);
+		}
+	}
+}
+%filter-interests{
+	width: 50%;
+	display:block;
+	cursor: pointer;
+	margin-left: 0;
+	@media screen and (min-width: $bp-sm){
+		width:auto;
+		display:inline-block;
+		margin-left: inherit;
+	}
+}
+#filter-interests {
+	.interest {
+		@extend %filter-interests;
+	}
+}
+%inline-list{
+	display:block;
+	list-style-type: none;
+	li {
+		display:inline-block;
+		line-height: 1.4;
+	}
+}
+
+#faculty-list {
+	margin-top: 20px;
+	a {
+		color: inherit;
+		&:hover{
+			text-decoration: none;
+		}
+		.person{
+			//display:block;
+			overflow:hidden;
+			position:relative;
+			padding: 0 1.5em;
+			height:auto;
+			background-color: $gray-light;
+			box-shadow: 0 1px 1px rgba(0,0,0,.25);
+			@media screen and (min-width: $bp-sm){
+				min-height: 300px;
+			} 
+			@media screen and (min-width: $bp-lg){
+				min-height: 425px;
+			} 
+			&.thumbnail{
+				border-radius: 0;
+				border-bottom-right-radius: 40px;
+				border-top-left-radius: 40px;
+			}
+			&:hover {
+			    background-color: $gray-light-2;
+			}
+			h3 {
+				margin-top: 30px;
+			}
+			ul.depts{
+				@extend %inline-list;
+				position:absolute;
+				top:0;
+				right:0;
+				margin-bottom: 0;
+				padding-left: 0;
+				li.dept-descript{
+					padding: 0 7px;
+					box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+					border-bottom-right-radius: 10px;
+					border-top-left-radius: 10px;
+					&.dept-bios {
+						@include dept-colors($dept-bios,$white);
+					}
+					&.dept-bshe {
+						@include dept-colors($dept-bshe,$white);
+					}
+					&.dept-epi {
+						@include dept-colors($dept-epi,$gray-dark);
+					}
+					&.dept-hpm {
+						@include dept-colors($dept-hpm,$gray-dark);
+					}
+					&.dept-gh {
+						@include dept-colors($dept-gh,$white);
+					}
+					&.dept-eh {
+						@include dept-colors($dept-eh,$gray-dark);
+					}
+					&.dept-emph {
+						@include dept-colors($dept-emph,$white);
+					}
+				}
+			}
+			/* ul.interests{
+				@extend %inline-list;
+					margin-bottom: 0;
+					padding-left: 0;
+				li.interest-descript{
+					@extend %filter-interests;
+					padding: 5px 20px 5px 0px;
+				}
+			} */
+
+			p.interests {
+				font-size: .9em;
+				line-height: 1.75em;
+			}
+
+			figure {
+				max-width:100%;
+				img {
+					max-height:100%;
+					max-width:100%;
+				}
+			}
+		}
+	}
+}
+@import 'profile';

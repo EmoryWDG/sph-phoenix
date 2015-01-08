@@ -1,0 +1,225 @@
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+#filter-departments li.dept {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (min-width: 48em) {
+  #filter-departments li.dept {
+    display: inline-block;
+    width: auto;
+    margin: inherit;
+  }
+}
+#filter-departments li.dept.dept-bios.active a {
+  background-color: #004990;
+  color: #fff;
+}
+#filter-departments li.dept.dept-bshe.active a {
+  background-color: #ad1e39;
+  color: #fff;
+}
+#filter-departments li.dept.dept-epi.active a {
+  background-color: #ffe363;
+  color: #333;
+}
+#filter-departments li.dept.dept-hpm.active a {
+  background-color: #ebeec7;
+  color: #333;
+}
+#filter-departments li.dept.dept-gh.active a {
+  background-color: #ff7940;
+  color: #fff;
+}
+#filter-departments li.dept.dept-eh.active a {
+  background-color: #cfdd3d;
+  color: #333;
+}
+#filter-departments li.dept.dept-emph.active a {
+  background-color: #4c0066;
+  color: #fff;
+}
+
+#filter-interests .interest {
+  width: 50%;
+  display: block;
+  cursor: pointer;
+  margin-left: 0;
+}
+@media screen and (min-width: 48em) {
+  #filter-interests .interest {
+    width: auto;
+    display: inline-block;
+    margin-left: inherit;
+  }
+}
+
+#faculty-list a .person ul.depts {
+  display: block;
+  list-style-type: none;
+}
+#faculty-list a .person ul.depts li {
+  display: inline-block;
+  line-height: 1.4;
+}
+
+#faculty-list {
+  margin-top: 20px;
+}
+#faculty-list a {
+  color: inherit;
+}
+#faculty-list a:hover {
+  text-decoration: none;
+}
+#faculty-list a .person {
+  overflow: hidden;
+  position: relative;
+  padding: 0 1.5em;
+  height: auto;
+  background-color: #f8f8f8;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  /* ul.interests{
+  	@extend %inline-list;
+  		margin-bottom: 0;
+  		padding-left: 0;
+  	li.interest-descript{
+  		@extend %filter-interests;
+  		padding: 5px 20px 5px 0px;
+  	}
+  } */
+}
+@media screen and (min-width: 48em) {
+  #faculty-list a .person {
+    min-height: 300px;
+  }
+}
+@media screen and (min-width: 75em) {
+  #faculty-list a .person {
+    min-height: 425px;
+  }
+}
+#faculty-list a .person.thumbnail {
+  border-radius: 0;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 40px;
+}
+#faculty-list a .person:hover {
+  background-color: #eee;
+}
+#faculty-list a .person h3 {
+  margin-top: 30px;
+}
+#faculty-list a .person ul.depts {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+#faculty-list a .person ul.depts li.dept-descript {
+  padding: 0 7px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#faculty-list a .person ul.depts li.dept-descript.dept-bios {
+  background-color: #004990;
+  color: #fff;
+}
+#faculty-list a .person ul.depts li.dept-descript.dept-bshe {
+  background-color: #ad1e39;
+  color: #fff;
+}
+#faculty-list a .person ul.depts li.dept-descript.dept-epi {
+  background-color: #ffe363;
+  color: #333;
+}
+#faculty-list a .person ul.depts li.dept-descript.dept-hpm {
+  background-color: #ebeec7;
+  color: #333;
+}
+#faculty-list a .person ul.depts li.dept-descript.dept-gh {
+  background-color: #ff7940;
+  color: #fff;
+}
+#faculty-list a .person ul.depts li.dept-descript.dept-eh {
+  background-color: #cfdd3d;
+  color: #333;
+}
+#faculty-list a .person ul.depts li.dept-descript.dept-emph {
+  background-color: #4c0066;
+  color: #fff;
+}
+#faculty-list a .person p.interests {
+  font-size: .9em;
+  line-height: 1.75em;
+}
+#faculty-list a .person figure {
+  max-width: 100%;
+}
+#faculty-list a .person figure img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+#faculty-profile header {
+  /* 		border: 1px solid $gray-light;
+  		border-top-left-radius: 40px;
+  		border-bottom-right-radius: 40px;
+  		box-shadow: 0 1px 1px rgba(0,0,0,.25);
+  		padding: 1em 1.5em;
+   */
+  margin-bottom: 20px;
+}
+#faculty-profile header .dept-hero {
+  width: 100%;
+}
+#faculty-profile header .dept-hero .dept-bios {
+  background-color: #004990;
+  color: #fff;
+}
+#faculty-profile header .dept-hero .dept-bshe {
+  background-color: #ad1e39;
+  color: #fff;
+}
+#faculty-profile header .dept-hero .dept-epi {
+  background-color: #ffe363;
+  color: #333;
+}
+#faculty-profile header .dept-hero .dept-hpm {
+  background-color: #ebeec7;
+  color: #333;
+}
+#faculty-profile header .dept-hero .dept-gh {
+  background-color: #ff7940;
+  color: #fff;
+}
+#faculty-profile header .dept-hero .dept-eh {
+  background-color: #cfdd3d;
+  color: #333;
+}
+#faculty-profile header .dept-hero .dept-emph {
+  background-color: #4c0066;
+  color: #fff;
+}
+#faculty-profile .profile-summary figure {
+  width: 200px;
+  padding: 0;
+  background-color: #f8f8f8;
+  border: 4px solid #fff;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  float: right;
+  margin: 0 0 1em 1.5em;
+}
+
+/*# sourceMappingURL=faculty-finder.css.map */

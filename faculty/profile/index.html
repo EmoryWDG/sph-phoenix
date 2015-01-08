@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Profile</title>
+	<!--template-assets-->
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="https://template.emory.edu/assets/wdg/custom-framework/css/font-awesome.min.css" rel="stylesheet"/>
+	<link href="https://template.emory.edu/assets/wdg/custom-framework/css/main.min.css" rel="stylesheet"/>
+	<link href="../css/faculty-finder.css" rel="stylesheet"/>
+	<link href="http://staging.web.emory.edu/sph-f1/css/style.css" rel="stylesheet">
+
+	<!--template-assets-->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="../js/jquery.ba-bbq.min.js"></script>
+	<script src="https://template.emory.edu/assets/js/libraries/modernizr-2.6.2.min.js"></script>
+	<script src="https://template.emory.edu/assets/wdg/custom-framework/js/html5shiv.js"></script>
+	<script src="../js/ng-profile.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div id="faculty-profile" itemscope="" itemtype="http://schema.org/Person" ng-app="faculty-profile">
+			<div class="container person" ng-controller="facultyProfile"><header>
+				<div class="dept-hero">
+					<h1 itemprop="name"><span itemprop="givenName">{{personal.FirstName}}</span> <span itemprop="familyName">{{personal.LastName}}</span></h1>
+					<p ng-class="dept-{{profile.DeptCode.trim().toLowerCase()}}" ng-repeat="profile in profileData"><span itemprop="jobTitle">{{profile.FacultyDescription}}</span>, <span itemprop="memberOf">{{profile.DeptDescr}}</span></p>
+				</div>
+			</header>
+ 			<div class="row clearfix">
+				<div class="profile-summary col-sm-8" ng-if="personal.Summary != '' || personal.IMG[0].imgExists == true">
+					<figure ng-if="personal.IMG[0].imgExists == true"><img class="profile-photo" itemprop="image" ng-src="{{personal.IMG[0].imgLink}}" /></figure>
+					<div class="summary-content" itemprop="description" ng-bind-html="personal.Summary | unsafe" ng-if="personal.Summary != ''"></div>
+					<div class="summary-content" ng-if="personal.Summary == ''">
+						<p>No summary available</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="contact-info" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<h2>Contact Information</h2>
+						<p ng-if="address.MailStop != ''"><span itemprop="streetAddress">{{address.MailStop}} {{address.Street}}</span></p>
+						<p ng-if="address.City != '' &amp;&amp; address.StateName != ''"><span itemprop="addressLocality">{{address.City}}</span>, <span itemprop="addressRegion">{{address.StateCode}}</span> <span itemprop="postalCode">{{address.Zip}}</span></p>
+						<p ng-if="address.Phone != ''">Phone: <a itemprop="telephone" ng-href="tel:+1{{address.Phone}}">{{address.Phone}}</a></p>
+						<p ng-if="personal.PrimaryEmail != ''"><a itemprop="email" href="mailto:{{personal.PrimaryEmail}}">{{personal.PrimaryEmail}}</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="education col-sm-12">
+					<h2>Education</h2>
+					<ul ng-if="education != ''">
+						<li ng-repeat="degree in education">{{degree.DegreeName}}, {{degree.DegreeYear}}, <span itemprop="alumniOf">{{degree.Institution}}</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<!--
+				<div class="col-sm-12" id="projects" ng-if="projects != ''">
+					<h2>Projects</h2>
+					<div class="projects" style="margin-left: 2em;">
+						<section ng-repeat="project in projects">
+							<h3 ng-if="project.Title != ''">{{project.Description}}</h3>
+							<div ng-if="project.Description != ''" ng-bind-html="project.Description | unsafe"></div>
+							<span ng-if="project.Description == ''">Projects not listed</span>
+						</section>
+					</div>
+					<p ng-if="projects == ''">No projects</p>
+				</div>
+				-->
+				<div ng-if="courses != ''" class="col-sm-12" id="courses">
+					<h2>Current Courses</h2>
+					<ul>
+						<li ng-repeat="course in courses track by $id(course)"><span ng-if="course.Course != ''">{{course.Course}}</span><span ng-if="course.Title != ''">: {{course.Title}}</span></li>
+					</ul>
+				</div>
+				<div ng-if="affiliations != ''" class="col-sm-12" id="affiliations">
+					<h2>Groups and Centers</h2>
+						<div itemprop="affiliation" ng-bind-html="affiliation.Description | unsafe" ng-repeat="affiliation in affiliations"></div>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="publications col-sm-12">
+					<h2>Publications</h2>
+					<ul class="publications" ng-if="pubs != ''">
+						<li ng-repeat="pub in pubs track by $id(pub)">
+							<a ng-if="pub.Link != ''" ng-href="pub.Link">
+								{{pub.Authors}} ({{pub.PubYear}}), {{pub.PubTitle}}. <em>{{pub.JournalName}}</em>
+								<span ng-if="pub.Volume !=''">, {{pub.Volume}}</span>
+								<span ng-if="pub.Pages !=''">, {{pub.Pages}}</span>
+							</a>
+							<span ng-if="pub.Link == ''">
+								{{pub.Authors}} ({{pub.PubYear}}), {{pub.PubTitle}}. <em>{{pub.JournalName}}</em>
+								<span ng-if="pub.Volume !=''">, {{pub.Volume}}</span>
+								<span ng-if="pub.Pages !=''">, {{pub.Pages}}</span>
+							</span>
+						</li>
+					</ul>
+					<p ng-if="pubs == ''">No publications listed</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
