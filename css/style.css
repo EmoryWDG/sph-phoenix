@@ -1414,6 +1414,8 @@ nav#sub-nav {
   .nav-search-wrap nav.nav-primary .search-form .btn {
     font-size: 12px;
     font-size: 0.75rem; }
+  .nav-search-wrap nav.nav-primary .input-group-btn {
+    font-size: .7em; }
   .nav-search-wrap .input-group-btn {
     font-size: .7em; }
 

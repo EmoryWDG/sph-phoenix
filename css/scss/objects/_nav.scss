@@ -696,6 +696,10 @@ nav#sub-nav {
 			.search-form .btn {
 				@include font-size($primary-expanded-but-small-nav-size);
 			}
+
+			.input-group-btn {
+			font-size: .7em;
+		}
 		}
 		.input-group-btn {
 			font-size: .7em;
