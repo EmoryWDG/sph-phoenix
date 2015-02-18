@@ -1031,6 +1031,9 @@ a.emory-logo {
 .input-group-btn {
   font-size: inherit; }
 
+.hidden-smallest {
+  display: none !important; }
+
 .toggles {
   font-family: "Open Sans", Verdana, Arial, sans-serif;
   padding: 0; }
