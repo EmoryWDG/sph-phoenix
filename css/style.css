@@ -1454,7 +1454,10 @@ nav#sub-nav {
     display: table-footer-group; }
 
   div.col-sm-9 {
-    display: table-row; } }
+    display: table-row; }
+
+  nav.nav-secondary ul {
+    display: none; } }
 @media all and (min-width: 62em) and (max-width: 75em) {
   .nav-search-wrap nav.nav-primary a {
     padding: 0 .nav-search-wrap nav.nav-primary a pad;
