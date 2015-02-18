@@ -10,6 +10,10 @@ $secondary-nav-font-size: 0.875em;
 
 // toggle navigation
 // Lindsay's comment here
+
+.input-group-btn {
+			font-size: inherit;
+		} 
 .toggles {
 	font-family: $font-secondary;
 	padding: 0;
@@ -683,9 +687,7 @@ nav#sub-nav {
 // if we are at the awkward breakpoint
 @media all and (min-width: $bp-sm) and (max-width: $bp-md) {
 
-	.input-group-btn {
-			font-size: inherit;
-		}
+	
 
 	.header-hat, nav.nav-emory-wide {
 		font-size: $secondary-nav-font-size;

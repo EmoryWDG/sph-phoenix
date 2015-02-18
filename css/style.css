@@ -1028,6 +1028,9 @@ a.emory-logo {
 /*------------------------------------*\
     $NAVIGATION
 \*------------------------------------*/
+.input-group-btn {
+  font-size: inherit; }
+
 .toggles {
   font-family: "Open Sans", Verdana, Arial, sans-serif;
   padding: 0; }
@@ -1405,9 +1408,6 @@ nav#sub-nav {
       float: right;
       font-size: 1em; } }
 @media all and (min-width: 48em) and (max-width: 62em) {
-  .input-group-btn {
-    font-size: inherit; }
-
   .header-hat, nav.nav-emory-wide {
     font-size: 0.875em; }
 
