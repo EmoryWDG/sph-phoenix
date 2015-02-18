@@ -1451,9 +1451,10 @@ nav#sub-nav {
       font-size: 1em;
       font-weight: normal; }
 
-  main div.container div.col-sm-3 {
+  div.col-sm-3 {
     display: table-footer-group; }
-  main div.container div.col-sm-9 {
+
+  div.col-sm-9 {
     display: table-row; } }
 @media all and (min-width: 62em) and (max-width: 75em) {
   .nav-search-wrap nav.nav-primary a {

@@ -758,13 +758,11 @@ nav#sub-nav {
 		}
 	}
 
-	main {
-		div.container {
+
 
 		div.col-sm-3 {display:table-footer-group;}
 		div.col-sm-9 {display:table-row;}
-		}
-	}
+		
 }
 
 @media all and (min-width: $bp-md) and (max-width: $bp-lg) {
