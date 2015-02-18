@@ -683,6 +683,10 @@ nav#sub-nav {
 // if we are at the awkward breakpoint
 @media all and (min-width: $bp-sm) and (max-width: $bp-md) {
 
+	.input-group-btn {
+			font-size: inherit;
+		}
+
 	.header-hat, nav.nav-emory-wide {
 		font-size: $secondary-nav-font-size;
 	}
@@ -701,9 +705,7 @@ nav#sub-nav {
 			font-size: .7em;
 		}
 		}
-		.input-group-btn {
-			font-size: .7em;
-		}
+		
 
 	}
 	nav.nav-secondary {

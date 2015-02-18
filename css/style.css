@@ -1405,6 +1405,9 @@ nav#sub-nav {
       float: right;
       font-size: 1em; } }
 @media all and (min-width: 48em) and (max-width: 62em) {
+  .input-group-btn {
+    font-size: inherit; }
+
   .header-hat, nav.nav-emory-wide {
     font-size: 0.875em; }
 
@@ -1415,8 +1418,6 @@ nav#sub-nav {
     font-size: 12px;
     font-size: 0.75rem; }
   .nav-search-wrap nav.nav-primary .input-group-btn {
-    font-size: .7em; }
-  .nav-search-wrap .input-group-btn {
     font-size: .7em; }
 
   nav.nav-secondary {
