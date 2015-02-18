@@ -1031,9 +1031,6 @@ a.emory-logo {
 .input-group-btn {
   font-size: inherit; }
 
-.hidden-smallest {
-  display: none !important; }
-
 .toggles {
   font-family: "Open Sans", Verdana, Arial, sans-serif;
   padding: 0; }
@@ -1462,6 +1459,9 @@ nav#sub-nav {
 
   nav.nav-secondary {
     font-size: .8em; } }
+@media all and (max-width: 24em) {
+  .hidden-smallest {
+    display: none; } }
 .pagination {
   overflow: hidden; }
   .pagination li {

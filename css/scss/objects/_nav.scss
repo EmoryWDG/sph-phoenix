@@ -15,10 +15,7 @@ $secondary-nav-font-size: 0.875em;
 			font-size: inherit;
 		} 
 
-.hidden-smallest {
-    display: none !important;
-  }
-  
+
 .toggles {
 	font-family: $font-secondary;
 	padding: 0;
@@ -778,6 +775,14 @@ nav#sub-nav {
 		font-size: .8em;
 	}
 }
+
+
+@media all and (max-width: $bp-xs) {
+.hidden-smallest {
+    display: none;
+  }
+}
+
 //Pagination
 .pagination {
 	overflow: hidden;
